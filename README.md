@@ -18,3 +18,10 @@ Minha versão de solução para o desafio [Run The Bank](https://github.com/viei
 >   - Spring for RabbitMQ
 >   - Lombok
 >   - Spring REST Docs
+
+---
+## Comentários sobre o desenvolvimento
+
+- Uso de [Lombok](https://projectlombok.org/) para gerar código básico e repetitivo de forma automatizada (getters, setters, construtores simples, equals, hashCode e toString)
+  - Obs.: O Lombok exige o uso de um plugin na IDE para funcionar corretamente. Verifique a documentação 
+- Uso de [SpringDoc OpenApi](https://springdoc.org/)  para simplificar documentação das APIs 
