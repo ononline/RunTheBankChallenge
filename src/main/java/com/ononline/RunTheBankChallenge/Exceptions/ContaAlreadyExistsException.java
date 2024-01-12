@@ -8,4 +8,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  */
 @ResponseStatus(value=HttpStatus.CONFLICT, reason="Conta já existente na base")
 public class ContaAlreadyExistsException extends RuntimeException{
+    public ContaAlreadyExistsException(){
+        super("Conta já existente");
+    }
+    
+    public ContaAlreadyExistsException(String message){
+        super(message);
+    }
 }

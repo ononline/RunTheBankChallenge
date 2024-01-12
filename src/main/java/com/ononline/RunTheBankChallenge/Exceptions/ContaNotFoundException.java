@@ -8,4 +8,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  */
 @ResponseStatus(value=HttpStatus.NOT_FOUND, reason="Conta não encontrada na base")
 public class ContaNotFoundException extends RuntimeException{
+    public ContaNotFoundException() {
+        super("Conta não encontrada");
+    }
+    
+    public ContaNotFoundException(String message) {
+        super(message);
+    }
 }

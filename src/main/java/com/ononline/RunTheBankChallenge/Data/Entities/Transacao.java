@@ -1,5 +1,6 @@
 package com.ononline.RunTheBankChallenge.Data.Entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,6 +19,7 @@ public class Transacao {
      */
     @Id
     @GeneratedValue
+    @JsonProperty
     private long id;
     
     /**
@@ -28,6 +30,7 @@ public class Transacao {
             @JoinColumn(name="contaOrigemId", referencedColumnName = "id"),
             @JoinColumn(name="contaOrigemAgencia", referencedColumnName = "agencia")
     })
+    @JsonProperty
     private Conta contaOrigem;
     
     /**
@@ -38,20 +41,24 @@ public class Transacao {
             @JoinColumn(name="contaDestinoId", referencedColumnName = "id"),
             @JoinColumn(name="contaDestinoAgencia", referencedColumnName = "agencia")
     })
+    @JsonProperty
     private Conta contaDestino;
     
     /**
      * Valor da transação.
      */
+    @JsonProperty
     private float valor;
     
     /**
      * Indica se a transação foi revertida.
      */
+    @JsonProperty
     private boolean revertido;
     
     /**
      * Observações adicionais sobre a transação.
      */
+    @JsonProperty
     private String observacoes;
 }

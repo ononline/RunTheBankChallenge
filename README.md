@@ -31,4 +31,7 @@ Minha versão de solução para o desafio [Run The Bank](https://github.com/viei
   - Não foi aplicada nenhuma camada de segurança, mesmo que os clientes tenham senha, inclusive a mesma é guardada como texto simples, sem criptografia
   - A aplicação foi criada como um "monolito", em um ambiente real seria interessante desacoplar estas funções em microsserviços a fim de permitir escalabilidade vertical
   - Foram feitos apenas testes unitários, não criei testes integrados
+  - A transação está sendo gravada como um único registro. O ideal seria que fossem dois registros, um por conta, com os dados vinculados.
+  - O envio da notificação para o servidor externo deveria ocorrer através de uma fila, devido à possível instabilidade indicada na documentação. A fila permitiria que o envio fosse assíncrono e que fossem realizadas novas tentativas no caso de indisponibilidade do serviço.
+- O envio da notificação para o servidor externo não está funcionando corretamente. Será corrigido o quanto antes.
   

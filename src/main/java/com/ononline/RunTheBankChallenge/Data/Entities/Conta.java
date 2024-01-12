@@ -43,5 +43,21 @@ public class Conta {
      * Status da conta, indicando se está ativa ou não.
      */
     private boolean status;
-
+    
+    /**
+     * Realiza um débito na conta, subtraindo o valor especificado do saldo.
+     * @param value O valor a ser debitado da conta.
+     */
+    public void debit(float value){
+        this.saldo -= value;
+    }
+    
+    /**
+     * Realiza um crédito na conta, adicionando o valor especificado ao saldo.
+     * @param value O valor a ser creditado na conta.
+     */
+    public void credit(float value){
+        this.saldo += value;
+    }
+    
 }

@@ -8,4 +8,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  */
 @ResponseStatus(value=HttpStatus.CONFLICT, reason="Cliente já existente na base")
 public class ClienteAlreadyExistsException extends RuntimeException{
+    public ClienteAlreadyExistsException(){
+        super("Cliente já existente na base");
+    }
+    
+    public ClienteAlreadyExistsException(String message){
+        super(message);
+    }
 }
