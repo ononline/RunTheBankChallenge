@@ -23,6 +23,8 @@ Minha versão de solução para o desafio [Run The Bank](https://github.com/viei
   - Obs.: O Lombok exige o uso de um plugin na IDE para funcionar corretamente. Verifique a documentação 
 - Uso de [SpringDoc OpenApi](https://springdoc.org/)  para simplificar documentação das APIs
 - Testes unitários criados utilizando pacote padrão do Spring Web MVC (JUnit, Mockito)
+- Documentação de uso dos Endpoints do projeto pode ser encontrado no [Swagger](http://localhost:8080/swagger-ui), ao executar o projeto
+  - Também pode ser visualizada de forma estática no arquivo [openapi.md](openapi.md)
 
 ---
 ## Pontos a melhorar
@@ -33,5 +35,3 @@ Minha versão de solução para o desafio [Run The Bank](https://github.com/viei
   - Foram feitos apenas testes unitários, não criei testes integrados
   - A transação está sendo gravada como um único registro. O ideal seria que fossem dois registros, um por conta, com os dados vinculados.
   - O envio da notificação para o servidor externo deveria ocorrer através de uma fila, devido à possível instabilidade indicada na documentação. A fila permitiria que o envio fosse assíncrono e que fossem realizadas novas tentativas no caso de indisponibilidade do serviço.
-- O envio da notificação para o servidor externo não está funcionando corretamente. Será corrigido o quanto antes.
-  
