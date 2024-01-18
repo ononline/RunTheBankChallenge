@@ -2,10 +2,6 @@ package com.ononline.RunTheBankChallenge.Utilities;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ononline.RunTheBankChallenge.Data.Entities.Transacao;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
 import java.net.http.HttpClient;
