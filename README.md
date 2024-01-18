@@ -23,6 +23,8 @@ Minha versão de solução para o desafio [Run The Bank](https://github.com/viei
   - Obs.: O Lombok exige o uso de um plugin na IDE para funcionar corretamente. Verifique a documentação 
 - Uso de [SpringDoc OpenApi](https://springdoc.org/)  para simplificar documentação das APIs
 - Testes unitários criados utilizando pacote padrão do Spring Web MVC (JUnit, Mockito)
+- Documentação de uso dos Endpoints do projeto pode ser encontrado no [Swagger](http://localhost:8080/swagger-ui), ao executar o projeto
+  - Também pode ser visualizada de forma estática no arquivo [openapi.md](openapi.md)
 
 ---
 ## Pontos a melhorar
