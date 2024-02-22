@@ -1,15 +1,12 @@
 package com.ononline.RunTheBankChallenge.Data.Entities;
 
 import com.ononline.RunTheBankChallenge.Data.Ids.ContaId;
-import lombok.*;
 
 /**
  * Representa uma versão simplificada da entidade Transacao, para permitir chamadas simples da API de transações.
  * Cada instância desta classe corresponde a uma transação com informações associadas.
  */
 
-@Data
-@NoArgsConstructor
 public class TransacaoSDO {
     
     /**
@@ -26,4 +23,31 @@ public class TransacaoSDO {
      * Valor da transação.
      */
     private float valor;
+    
+    public TransacaoSDO() {
+    }
+    
+    public ContaId getContaOrigem() {
+        return this.contaOrigem;
+    }
+    
+    public ContaId getContaDestino() {
+        return this.contaDestino;
+    }
+    
+    public float getValor() {
+        return this.valor;
+    }
+    
+    public void setContaOrigem(ContaId contaOrigem) {
+        this.contaOrigem = contaOrigem;
+    }
+    
+    public void setContaDestino(ContaId contaDestino) {
+        this.contaDestino = contaDestino;
+    }
+    
+    public void setValor(float valor) {
+        this.valor = valor;
+    }
 }
